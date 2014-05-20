@@ -58,3 +58,5 @@ or
     $ tape test.js
 
 `estktap` function takes 3 arguments, `estktap(message, jsx_script_path, is_a)`
+
+`is_a` accepts number, string, boolean, also function. see `example.js`
