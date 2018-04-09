@@ -1,4 +1,4 @@
-#target InDesign-7.0
+#target InDesign-11
 #include "../myfn.jsx"
 
 var data = {x:0, y:0, width:3000, height: 5000};

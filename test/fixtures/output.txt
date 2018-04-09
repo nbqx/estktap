@@ -1,14 +1,21 @@
 TAP version 13
-# this is adobe extendscript tap test
-# this is adobe extendscript tap test
+# extendscript tap test
+# extendscript tap test with target
+# extendscript tap test with function
+# extendscript tap test with multiple targets and function
 # this must be true
 ok 1 this must be true
+# this must be true
+ok 2 this must be true
 # deepEqual
-ok 2 should be equivalent
+ok 3 should be equivalent
+# deepEqual
+ok 4 should be equivalent
+ok 5 should be equivalent
 
-1..2
-# tests 2
-# pass  2
+1..5
+# tests 5
+# pass  5
 
 # ok
 

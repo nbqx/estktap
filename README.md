@@ -1,10 +1,28 @@
-## estktap
+# estktap
 
 tap([tape](https://github.com/substack/tape)) wrapper for testing adobe extendscript
 
 ## usage
 
-myfn.jsx
+The `estktap` function takes 4 arguments:
+
+    estktap(message, jsx_script_path, is_a, targets)
+
+1. `message` String: Description
+
+2. `jsx_script_path` _String_: Path to script to test
+
+3. `is_a` _Number_, _String_, _Boolean_, _Function_: Comparitor
+
+4. `targets` _Array_: (Optional) List of targets
+
+> version number needs to be specified in targets `[indesign-7.0,indesign-11]` see [versions.json](https://github.com/nbqx/fakestk/blob/master/resources/versions.json)  
+
+## example
+
+### script to test
+
++ myfn.jsx
 
 ```js
 Myfn = this.Myfn || {};
@@ -27,7 +45,9 @@ Myfn.add = function(doc){
 };
 ```
 
-test.jsx(for testing myfn.jsx)
+### write test
+
++ test.jsx (for testing myfn.jsx)
 
 ```js
 #target InDesign-7.0
@@ -37,9 +57,11 @@ var doc = (app.documents.length===0)? app.documents.add() : app.activeDocument;
 $.write(Myfn.count(doc)===1); // must
 ```
 
-you should append `$.write(xxx)` at end in extendscript code for the test, because it uses tap test as output.
+> You should append `$.write(xxx)` at end in extendscript code for the test, because it uses tap test as output.
 
-then write test.js
+### create runner
+
++ test.js (for running test.js)
 
 ```js
 var test = require('tape'),
@@ -51,12 +73,14 @@ test('this is adobe extendscript tap test',function(t){
 });
 ```
 
+### run
+
     $ node test.js
 
 or
 
     $ tape test.js
 
-`estktap` function takes 3 arguments, `estktap(message, jsx_script_path, is_a)`
+## more examples
 
-`is_a` accepts number, string, boolean, also function. see `example.js`
+See [`example.js`](./example.js)
