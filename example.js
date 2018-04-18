@@ -1,4 +1,4 @@
-var test = require('tape'),
+var test = require('tape-catch'),
     estktap = require(__dirname);
 
 var targets = ['indesign-12'];

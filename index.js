@@ -1,4 +1,4 @@
-var tape =  require('tape'),
+var tape =  require('tape-catch'),
     fakestk = require('fakestk');
 
 module.exports = estktap;
