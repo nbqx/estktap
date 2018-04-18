@@ -30,7 +30,7 @@ function estktap(mes,script,is_a,targets){
         fakestk.run(script,targetArr.pop(),function(err,res){
           if(err) return t.fail(err);
           var jsobj = (new Function('return '+res))();
-          is_a(jsobj);
+          is_a(jsobj, t);
           if(targetIndex.pop() === 0) t.end();
         });
       };

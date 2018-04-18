@@ -1,5 +1,4 @@
 .DS_Store
 .*.jsx
-.venv/
 node_modules
 package-lock.json
