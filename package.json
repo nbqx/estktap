@@ -1,7 +1,7 @@
 {
   "name": "estktap",
   "description": "tap(tape) wrapper for testing adobe extendscript",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "nbqx",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fakestk": "^0.3.5",
+    "fakestk": "^0.4.0",
     "tape": "^4.9.0",
     "tape-catch": "^1.0.6"
   }
